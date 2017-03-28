@@ -1,15 +1,15 @@
-These repository involves all files that has been used or going to be used in the project named 'Design of a filter inductor with planar magnetics'. \n
--AC current?
--Problem with choosing core and wire 
--Calculating efficiency
--Two possible cores: 
-MPP toroid: 55336 pg.87
-Kool Mu toroid: 77337 pg.87
--55336:
-AL=37 +-%8
-u=14
-Ie=324 mm
--77337
-AL=68 +-%8
-u=26
-Ie=324
+These repository involves all files that has been used or going to be used in the project named 'Design of a filter inductor with planar magnetics'.__
+-AC current?__
+-Problem with choosing core and wire__ 
+-Calculating efficiency__
+-Two possible cores:__ 
+MPP toroid: 55336 pg.87__
+Kool Mu toroid: 77337 pg.87__
+-55336:__
+AL=37 +-%8__
+u=14__
+Ie=324 mm__
+-77337__
+AL=68 +-%8__
+u=26__
+Ie=324__
