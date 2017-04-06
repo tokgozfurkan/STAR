@@ -1,0 +1,17 @@
+	**Design Procedure**
+ * L*I^2
+ * Locate core: MPP-Kool Mu???
+ * Calculate number of turns
+ 
+	  - Calculate AL
+	  - Bias
+	  - Percentage rolloff
+	  - L/(%Rolloff)
+	  - (Number of turns)/(%Rolloff)
+	  - Iterate from bias
+ * Choose wire size
+ * Design checks
+
+
+
+
