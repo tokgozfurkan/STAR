@@ -1,3 +1,4 @@
+```matlab
 function [N_new]= inductor(AL_nominal,L,I_e,I)
 
 - AL=AL_nominal-AL_nominal*0.08;   %inductance factor
@@ -9,3 +10,4 @@ function [N_new]= inductor(AL_nominal,L,I_e,I)
 - H_new=N_new*I/I_e;
 
 end
+```
