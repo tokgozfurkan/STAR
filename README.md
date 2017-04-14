@@ -10,16 +10,16 @@ These repository involves all files that has been used or going to be used in th
 - ~~u=14~~
 - ~~Ie=324 mm~~
 2. 77337
-- **AL=68 +-%8**
-- **u=26**
-- **Ie=324 mm**
+- **AL=68 +-%8** (inductance factor)
+- **u=26** (permeability)
+- **Ie=324 mm** (path length)
 - **Window Area=4710 mm^2** 
-  - N=219 (with no load)
-  - H=155,45
+  - N=219 (number of turns with no load)
+  - H=155,45 (DC bias)
   - First rolloff RO=%57,6
   - Nb=N/%RO=380 (number of turns with load)
   - Second rolloff= ROs=%33
-  - ALnew=AL*0.33=20.64
+  - ALnew=AL*0.33=20.64 (effective AL)
 - Lfinal= 2980 uH=2.98mH
    
  - Chosen wire
