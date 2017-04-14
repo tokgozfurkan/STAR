@@ -2,8 +2,8 @@ These repository involves all files that has been used or going to be used in th
 - ~~AC current~~
 - ~~Problem with choosing core and wire~~  
 - Calculating efficiency
-- ~~Two possible cores. ~~
-- ~~MPP toroid: 55336 pg.87 ~~
+- ~~Two possible cores.~~
+- ~~MPP toroid: 55336 pg.87~~
 - Kool Mu toroid: 77337 pg.87 (chosen)
 - ~~1. 55336:~~
 - ~~AL=37 +-%8~~
@@ -22,7 +22,7 @@ These repository involves all files that has been used or going to be used in th
   - ALnew=AL*0.33=20.64
 - Lfinal= 2980 uH=2.98mH
    
-   Chosen wire
+ - Chosen wire
      - 9 AWG 
      - 7.02 mm^2 wire area
      - total wire area= 7.02*380=26,676 cm^2
