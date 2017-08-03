@@ -1,8 +1,9 @@
 ```matlab
 
 
-        %design for Kool Mu 77337
-        %AL_nominal=68, L=3, I_e=32.4, I=23.
+
+%design for Kool Mu 77337
+%AL_nominal=68, L=3, I_e=32.4, I=23.
 
 AL=AL_nominal-AL_nominal*0.08;   %inductance factor
 N=sqrt(L*10^6/AL);   %number of turns without load
@@ -24,8 +25,8 @@ Pl=120*(Bpk^2.09)*(0.3)^1.46;
 Pcore=Pl*32.4*6.78;
 
 
-        %design for High Flux 58337 (mH)
-        %AL_nominal=68, L=3, I_e=32.4, I=23
+%design for High Flux 58337 (mH)
+%AL_nominal=68, L=3, I_e=32.4, I=23
 
 AL=AL_nominal-AL_nominal*0.08;   %inductance factor
 N=sqrt(L*10^6/AL);   %number of turns without load
@@ -56,8 +57,8 @@ T=((Pwinding*1000+13)/650)^0.833;
 Lleak=(0.292*(Nnew^1.065)*678)/324;
 
 
-        %new inductor design
-        %Design for MPP 55102
+%new inductor design 20kHz, 150uH, 55 A DC, 10 A AC
+%Design for MPP 55102
 
 AL_nominal=48;
 L=0.15;
@@ -91,4 +92,12 @@ T=((Pwinding*1000+13)/650)^0.833;
 
 %leakage inductance (uH)
 Lleak=(0.292*(Nnew^1.065)*678)/324;
+
+
+ %litz wire design
+S=sqrt((1.72e-08)/(20000*(4e-07)*(pi^2)));
+Ne=(318*(S^2)*57.2)/79;
+wflitz=(Ne*N_new*pi*0.160^2)/2470;
+Nbundle=(4*S^2)/(0.16^2);
+Area=pi*60*0.08^2;
 ```
