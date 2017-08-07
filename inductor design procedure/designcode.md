@@ -1,8 +1,5 @@
 ```matlab
 
-
-
-
         %design for Kool Mu 77337
         %AL_nominal=68, L=3, I_e=32.4, I=23.
 
@@ -134,9 +131,18 @@ Lleak=(0.292*(N_new^1.065)*358)/243000;
 
 S=sqrt((1.72e-08)/(20000*(4e-07)*(pi^2)))*1000; %skin depth (mm)
 Ne=(318*(S^2)*57.2)/45; %number of strands recommended
-wflitz=(Ne*N_new*pi*0.80^2)/2470; %winding factor of litz
+wflitz=(Ne*N_new*pi*0.08^2)/2470; %winding factor of litz
 Nbundle=(4*S^2)/(0.16^2); %max number of strands in a bundle
 Area=pi*Ne*0.08^2; %effective area of litz wire (mm^2)
+
+
+S=sqrt((1.72e-08)/(20000*(4e-07)*(pi^2)))*1000;
+D=[0.202 0.180 0.160 0.143 0.127 0.113 0.101 0.090 0.080 0.071 0.063 0.056 0.050 0.045 0.040 0.035 0.032];
+k=[130 203 318 496 771 1200 1800 2800 4400 6700 10000 16000 24000 36000 54000 79000 115000];
+N_strands=(k.*(S^2)*57.2)/45;
+wflitz=(N_strands.*((D./2).^2))*N_new*pi/2470;
+
+
 
 
 
