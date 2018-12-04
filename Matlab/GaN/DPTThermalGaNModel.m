@@ -20,7 +20,7 @@ Rss = 1e-3;
 Rt = (0.9*0.95*0.82*18.2/295 + 3.6*0.238*0.82/295);
 %% Circuit Parasitics
 Ldc = 20e-9;
-Lser=19e-9;
+Lser=5e-9;
 Lground = 5e-9;
 
 %% Gate Driver
@@ -70,7 +70,7 @@ DelayBot = 0;
 % DelayTop = 0;
 % DelayBot = 50;
 %% Run Simulink
-SampleTime = 5e-13;
+SampleTime = 1e-11;
 TrigTime = 0.4e-6;
 model = 'DPTThermalGaNModelSLX';
 load_system(model);
