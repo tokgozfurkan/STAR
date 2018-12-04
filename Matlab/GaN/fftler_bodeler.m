@@ -1,27 +1,40 @@
 signal=ScopeData1(:,2);                %signal data from simulink
-sqt=0:5e-13:3.5e-06;                   %creating square wave
-f=1e06;
-sq=400*0.5*(square(2*pi*f*sqt)+1);
-sq=transpose(sq);
-sq(1:1000000)=0;
-sq(1000001:2000001)=400;
-sq(2000001:3000001)=0;
-noise=signal-sq;                       
-noise_signal=noise(1004870:1.985e06);  %time between: 5.02435e-07-9.925e-07
+plot(ScopeData1(:,1),signal);
+title('Output voltage with updated parameters');
+xlabel('Time (s)');
+ylabel('Voltage (V)');
+sq(1:40000)=0;                        %creating square wave
+sq(40001:100000)=275;
+sq(100001:140000)=0;
+sq(140001:200000)=275;
+sq(200001:240000)=0;
+sq(240001:300000)=275;
+sq(300001:340000)=0;
+sq(340001:350001)=275;
+noise=signal-transpose(sq);                       
+noise_signal=noise(141986:199564);  %time between: 1.4198335e-07-1.994495e-07
+noise_t=linspace(141986,199564,57579);
+plot(noise_t,noise_signal);
+title('Noise signal with updated parameters');
+xlabel('Time (s)');
+ylabel('Voltage (V)');
+
 %%
 %FFT analysis
-Fs = 2e12;                    % Sampling frequency                        
-L = 980130;                   % Length of signal
+Fs = 1e11;                    % Sampling frequency                        
+L = 57578;                   % Length of signal
 Y = fft(noise_signal);
 P2 = abs(Y/L);
 P1 = P2(1:L/2+1);
 P1(2:end-1) = 2*P1(2:end-1);
 f = Fs*(0:(L/2))/L;
+P1_dB = 20*log10(P1/max(P1));
 stem(f,P1/max(P1)) 
-title('Single-Sided Amplitude Spectrum of Noise Signal')
+title('Single-Sided Amplitude Spectrum of Noise Signal with Decreased Resolution')
 xlabel('f(Hz)')
 ylabel('|Noise Signal|')
-ylim([0,1.1]);
+ylim([0 1.1]);
+
 
 %%
 %Bode
