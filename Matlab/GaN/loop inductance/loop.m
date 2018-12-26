@@ -12,14 +12,16 @@ sq(680001:700001)=275;
 thirty_noise=thirty(:,2)-transpose(sq); 
 plot(thirty_noise);
 thirty_noise_signal=thirty_noise(283953:399814);  
-noise_t_thirty=linspace(283953,399814,115862);
+noise_t_thirty=linspace(283953*3.5e-06/700000,399814*3.5e-06/700000,115862);
 
 %Plotting noise signals
 plot(noise_t_thirty,thirty_noise_signal);
-title('Noise signal with updated parameters');
+title('Noise signal with 30 nH loop inductance');
 xlabel('Time (s)');
 ylabel('Voltage (V)');
+xlim([283953*3.5e-06/700000 399814*3.5e-06/700000]);
 
+thirty_noise_signal=[noise_t_thirty thirty_noise_signal];
 %%
 %FFT analysis
 Fs = 2e11;                                   % Sampling frequency                        
